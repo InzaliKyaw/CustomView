@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+<RelativeLayout
+    android:id="@+id/relativeMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <TextView
+        android:id="@+id/createHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_heading"
+        android:textSize="28dp"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="20dp"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/addProfile"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+
+        android:weightSum="3"
+        android:layout_below="@id/createHeading">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+            <com.example.customviewassignment.views.component.RoundedImageView
+                android:id="@+id/imageRound"
+                layout="@layout/view_pod_plus"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="-20dp"
+                android:layout_marginLeft="@dimen/card_margin_left"
+                android:scaleType="fitCenter"
+                android:src="@drawable/lensball"
+                app:cornerRadius="30dp">
+
+            </com.example.customviewassignment.views.component.RoundedImageView>
+
+            <com.example.customviewassignment.views.component.RoundedImageView
+                android:id="@+id/imageRoundTwo"
+                layout="@layout/view_pod_plus"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="-20dp"
+                android:scaleType="fitCenter"
+                android:layout_below="@+id/createHeading"
+                android:layout_toRightOf="@id/imageRound"
+                android:src="@drawable/lensball"
+                app:cornerRadius="30dp">
+
+            </com.example.customviewassignment.views.component.RoundedImageView>
+
+            <com.example.customviewassignment.views.component.RoundedImageView
+                android:id="@+id/imageRoundThree"
+                layout="@layout/view_pod_plus"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="-10dp"
+                android:scaleType="fitCenter"
+                android:layout_below="@+id/createHeading"
+                android:layout_toRightOf="@id/imageRound"
+                android:src="@drawable/lensball"
+                app:cornerRadius="30dp">
+
+            </com.example.customviewassignment.views.component.RoundedImageView>
+            <com.example.customviewassignment.views.component.RoundedImageView
+                android:id="@+id/addSign"
+                layout="@layout/view_pod_plus"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="fitCenter"
+                android:layout_below="@+id/createHeading"
+                android:layout_toRightOf="@id/imageRoundTwo"
+                android:src="@drawable/ic_add_black_24dp"
+                app:cornerRadius="30dp">
+
+            </com.example.customviewassignment.views.component.RoundedImageView>
+
+        </LinearLayout>
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/rvTaskOverLap"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_below="@id/createHeading"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginLeft="-30dp"-->
+<!--            tools:listitem="@layout/item_profile_overlap">-->
+
+<!--        </androidx.recyclerview.widget.RecyclerView>-->
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_shape"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="85"
+            android:progressDrawable="@drawable/circular_progress_bar" >
+
+        </ProgressBar>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addProfile"
+        android:layout_marginTop="15dp"
+        tools:listitem="@layout/item_profile_list">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/bottom_sheet_profile"
+            android:visibility="gone">
+
+        </include>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

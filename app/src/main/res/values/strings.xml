@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">CustomViewAssignment</string>
+    <string name="create_heading">Create Addtional Pages</string>
+    <string name="closed_task">Closed tasks</string>
+    <string name="open_task">Open tasks</string>
+    <string name="user_name">Zachary Butler</string>
+    <string name="occupation">UI Designer</string>
+    <string name="msg_button">Message</string>
+    <string name="design">Design</string>
+    <string name="front_end">Frontend</string>
+    <string name="back_end">Backend</string>
+    <string name="project_name">Project Name</string>
+    <string name="client">CLIENT</string>
+    <string name="assignee">ASIGNEE</string>
+    <string name="category">CATEGORY</string>
+    <string name="description">DESCRIPTION</string>
+    <string name="creat_task">CREATE TASK</string>
+    <string name="attachment">ATTACHMENT</string>
+    <string-array name="team_list">
+        <item>SWALLOW TEAM</item>
+        <item>AWS TEAM</item>
+        <item>DESIGN TEAM</item>
+        </string-array>
+</resources>

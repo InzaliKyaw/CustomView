@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="2">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:text="@string/client"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp">
+
+            </TextView>
+            <com.example.customviewassignment.views.component.RoundedImageView
+                android:id="@+id/imageRoundProfile"
+                android:layout_margin="20dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/lensball"
+                app:cornerRadius="75dp">
+
+            </com.example.customviewassignment.views.component.RoundedImageView>
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/TextInputLayoutStyle"
+            android:layout_margin="20dp"
+            >
+            <AutoCompleteTextView
+                android:id="@+id/value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/project_name"
+        android:layout_margin="20dp"
+        app:hintTextColor="@color/text_color"
+        app:boxStrokeColor="@color/text_color"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/firstInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:background="@color/background"
+            android:singleLine="true"
+            >
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/assignee"
+        android:layout_marginLeft="40dp"
+        android:textColor="@color/text_color">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <com.example.customviewassignment.views.component.RoundedImageView
+            android:id="@+id/imageRound"
+            layout="@layout/view_pod_plus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/card_margin_left"
+            android:layout_marginRight="-20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/lensball"
+            app:cornerRadius="30dp">
+
+        </com.example.customviewassignment.views.component.RoundedImageView>
+
+        <com.example.customviewassignment.views.component.RoundedImageView
+            android:id="@+id/imageRoundSecond"
+            layout="@layout/view_pod_plus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/createHeading"
+            android:layout_marginRight="-20dp"
+            android:layout_toRightOf="@id/imageRound"
+            android:scaleType="fitCenter"
+            android:src="@drawable/lensball"
+            app:cornerRadius="30dp">
+
+        </com.example.customviewassignment.views.component.RoundedImageView>
+
+        <com.example.customviewassignment.views.component.RoundedImageView
+            android:id="@+id/imageRoundThree"
+            layout="@layout/view_pod_plus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/createHeading"
+            android:layout_marginRight="-10dp"
+            android:layout_toRightOf="@id/imageRound"
+            android:scaleType="fitCenter"
+            android:src="@drawable/lensball"
+            app:cornerRadius="30dp">
+
+        </com.example.customviewassignment.views.component.RoundedImageView>
+
+        <com.example.customviewassignment.views.component.RoundedImageView
+            android:id="@+id/addSign"
+            layout="@layout/view_pod_plus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/createHeading"
+            android:layout_toRightOf="@id/imageRoundTwo"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_add_black_24dp"
+            app:cornerRadius="30dp">
+
+        </com.example.customviewassignment.views.component.RoundedImageView>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/category"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/text_color">
+
+    </TextView>
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:singleLine="false"
+        android:layout_marginLeft="20dp"
+        app:chipSpacing="15dp">
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="Design">
+
+        </com.google.android.material.chip.Chip>
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="@string/front_end">
+
+        </com.google.android.material.chip.Chip>
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="@string/back_end">
+
+        </com.google.android.material.chip.Chip>
+    </com.google.android.material.chip.ChipGroup>
+    <include layout="@layout/bottom_sheet_detail"></include>
+
+
+
+
+
+</LinearLayout>
